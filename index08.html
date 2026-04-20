@@ -1,0 +1,841 @@
+          <!DOCTYPE HTML>
+<!--
+  
+  CSS Grid by Scoroncocolo notes
+    
+    all of the CSS styles are listed in the order they appear on the page
+      for instance .navbar and .nav-list are used to create the links at the top of the page 
+    
+-->
+
+<html>
+  <head>
+    <title>CSS Grid by Scoroncocolo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <noscript><link rel="stylesheet" href="noscript.css" /></noscript>
+    <!--<link rel="stylesheet" href="clean.css" />-->
+
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            position: sticky;
+            align-items: center;
+            justify-content: space-between;
+            top: 0px;
+            background: #1e252d;
+            background-blend-mode: darken;
+            background-size: cover;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-list li a:hover {
+            color: #ffd700;
+            /* Change the color on hover */
+        }
+
+        .rightNav {
+            text-align: right;
+        }
+
+    </style>
+
+  
+
+    <style>
+    
+.navbar {
+            display: flex;
+            position: sticky;
+            align-items: center;
+            justify-content: space-between;
+            top: 0px;
+            background: #1e252d;
+            background-blend-mode: darken;
+            background-size: cover;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-list li a:hover {
+            color: #ffd700;
+            /* Change the color on hover */
+        }
+
+        .rightNav {
+            text-align: right;
+        }   
+
+</style>
+
+<style>
+  .gridtime { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 1px;
+  align-items: start;
+  justify-items: center;
+  margin: auto;
+  width: 504px;
+  }
+.gridtime img {
+  max-width: 100%;
+}
+.gridtime img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+  }
+</style>
+
+
+    <style>
+    
+.hover {
+  --s: 150px; /* control the size */
+  --g: 10px;  /* control the gap */
+  --f: 1.5;   /* control the scale factor */
+  
+  display: grid;
+  gap: var(--g);
+  width: calc(3*var(--s) + 2*var(--g));
+  aspect-ratio: 1/2; /* 1 / 2; width is half the height 2/1; width is twice the height*/
+  grid-template-columns: repeat(3,auto);
+  /*margin-left:30em;
+  place-items: center;*/
+}
+
+.hover > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(40%);
+  transition: .35s linear;
+}
+
+.hover img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+} 
+
+</style>
+
+
+
+<style>
+    
+.hovertwo {
+  --s: 150px; /* control the size */
+  --g: 10px;  /* control the gap */
+  --f: 1.5;   /* control the scale factor */
+  
+  display: grid;
+  gap: var(--g);
+  width: calc(3*var(--s) + 2*var(--g));
+  aspect-ratio: 1; /* 1 / 2; width is half the height 2/1; width is twice the height*/
+  grid-template-columns: repeat(3,auto);
+  /*margin-left:30em;*/
+  place-items: center;
+}
+
+.hovertwo > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.hovertwo img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+} 
+
+</style>
+
+ <style>
+    
+.hoverfour {
+  --s: 150px; /* control the size */
+  --g: 10px;  /* control the gap */
+  --f: 3;   /* control the scale factor */
+  
+  display: grid;
+  gap: var(--g);
+  width: calc(3*var(--s) + 2*var(--g));
+  aspect-ratio: 1/2; /* 1 / 2; width is half the height 2/1; width is twice the height*/
+  grid-template-columns: repeat(3,auto);
+  /*margin-left:30em;
+  place-items: center;*/
+}
+
+.hoverfour > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(40%);
+  transition: .35s linear;
+}
+
+.hoverfour img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+} 
+
+</style>
+
+<style>
+
+  /* Start Four Corner */
+
+.fourcorner {
+  padding: 2rem;
+}
+
+.split-image-fourcorner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.quadrant {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-image: url("https://picsum.photos/300/300");
+  background-size: 300px 300px;
+  transition: transform 0.3s ease;
+}
+
+.quadrant-1 {
+  top: 0;
+  left: 0;
+  background-position: top left;
+}
+
+.quadrant-2 {
+  top: 0;
+  right: 0;
+  background-position: top right;
+}
+
+.quadrant-3 {
+  bottom: 0;
+  left: 0;
+  background-position: bottom left;
+}
+
+.quadrant-4 {
+  bottom: 0;
+  right: 0;
+  background-position: bottom right;
+}
+
+.split-image-fourcorner:hover .quadrant-1 {
+  transform: translate(-10px, -10px);
+}
+
+.split-image-fourcorner:hover .quadrant-2 {
+  transform: translate(10px, -10px);
+}
+
+.split-image-fourcorner:hover .quadrant-3 {
+  transform: translate(-10px, 10px);
+}
+
+.split-image-fourcorner:hover .quadrant-4 {
+  transform: translate(10px, 10px);
+}
+
+/* End Four Corner */
+
+</style>
+
+<style>
+
+a {
+  color: #b0ab8f;
+  text-decoration: underline;
+
+}
+
+/* visited link */
+a:visited {
+  color: #808080;
+}
+</style>
+
+<style>
+/* mouse over link */
+a:hover {
+  color: red; /* Color changes to red on hover */
+  text-decoration: none; /* Underline is removed on hover */
+}
+
+</style>
+
+<style>
+
+    h1, h2, h3, h4, h5, h6  {color:#b0ab8f;}
+
+ </style> 
+
+ <style>
+   
+   .little {width:100%; height:3em;}
+
+ </style>  
+
+ <style>
+   
+p {font-size: .75em;}
+span {color: #b0ab8f;}
+
+ </style>
+
+  </head>
+  <body class="is-preload">
+
+    <!-- Wrapper -->
+
+
+
+      <div id="wrapper" class="fade-in">
+
+        <p style="font-size: 18px";>&nbsp;&nbsp;<span id="currentDate"></span></p>
+
+
+
+        <!-- Intro -->
+          <div id="intro">
+
+<div style="display: grid; place-items: center;">
+      <h6 id="formattedDate">&nbsp;</h6>
+      <script>
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById("formattedDate").textContent = new Date().toLocaleDateString(undefined, options);
+</script>
+    </div> 
+
+            <h1 style="text-align: center;">Scoroncocolo</h1>
+              <h2 style="text-align: center;">CSS Grid</h2>
+              <h6 style="text-align: center;">The Wizard's Pages</h6>
+      <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="http://www.scoroncocolo.com/elements.html">Sanctum</a></li>
+            <li><a href="http://www.scoroncocolo.com/newphotoarchive.html">Pictures</a></li>
+            <li><a href="http://www.scoroncocolo.com/grid.html">CSS Grid</a></li>
+            <li><a href="http://www.scoroncocolo.com/grid-examples02.html">Grid Examples</a></li>
+        </ul>
+    </nav>            
+            
+            <ul class="actions">
+              <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+          </div>
+
+        <!-- Header -->
+          <header id="header">
+            <a href="scoroncocolo.jpg" class="logo">The Wizard</a>
+          </header>
+
+        <!-- Nav -->
+          <nav id="nav">
+            <ul class="links">
+              <li class="active"><a href="http://www.scoroncocolo.com/elements.html">Sanctum</a></li>
+              <li><a href="http://www.scoroncocolo.com/grid.html">CSS Grid</a></li>
+              <li><a href="http://www.scoroncocolo.com/grid-examples02.html">Grid Examples</a></li>
+              <li><a href="http://www.scoroncocolo.com/newphotoarchive.html">Pictures</a></li>
+            </ul>
+            <ul class="icons">
+              <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+              <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+          </nav>
+
+        <!-- Main -->
+          <div id="main">
+
+            <!-- Featured Post -->
+
+            <p style="font-size: 18px";>&nbsp;&nbsp;<span id="currentDate"></span></p>
+
+
+              <article class="post featured">
+                <header class="major">
+
+                  
+                  
+                  <h2>CSS Grid by<br />
+                  Scoroncocolo</h2>
+                  <p>This little Web page is all about creating CSS Grid collages using a combination of CSS and HTML code </br>
+              You don't have to own a website to make your own CSS Grid creations</br>But you WILL need a Text Editor like the one I use which is the free-to-try <a href="https://bitl.to/5k9a">Sublime Text</a></br>If you don't want to install a fancy text editor on a PC you can create webpages with <a href="https://bitl.to/5k9W">Notepad</a> or on a Mac with TextEdit</br>The best reason you should be interested in playing around with <a href="https://bitl.to/5k9g">CSS Grid image collages</a> is because it's fun to do</br>"We’re here on Earth to fart around... we’re dancing animals" - Kurt Vonnegut<br>You don't need to be a <a href="Wizard04.png">wizard</a> to make magic with CSS Grid</p>
+                </header>
+                
+                <div class="gridtime" style="width: 50%;">
+                                    <img src="Edward.png" alt="" title="Edward_III_of_England">
+                                    <img src="map02.JPG" alt="">
+                                    <img src="Joan.jpeg" alt="" title="Joan of Arc">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="Chaucer.png" alt="" title="Gregory Chaucer">
+                                    <img src="map02.JPG" alt="">
+                                    <img src="blackdeath.png" alt="" title="The Black Death">
+                                    <img src="Roses.png" alt="" title="War of the Roses">
+                                    <img src="map02.JPG" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="Poitiers.jpg" alt="" title="The Battle of Poitiers">
+                                    <img src="map02.JPG" alt="">
+                                </div>
+                
+              </article>
+
+            <!-- Posts -->
+              <section class="posts">
+                <article>
+                  <header>
+                  <h3>CSS Grid<br />
+              This is &lt;div class=&quot;hover&quot;&gt;</h3>
+                  </header>
+                    <img src="GitArchitecture.gif" alt="" / style="height: 18em; width: 18em;">
+
+                                <h6>Hover with 12 Image Files</h6>
+
+      <p>First of all I'd like to thank <a href=“https://css-tricks.com/author/geoffgraham/“>Geoff Graham</a>  of CSS-Tricks for helping me to wrap my head around the magic of CSS Hover Effect<br></p>
+
+            <p>These <strong>Hover Effects</strong> activate when a user moves the mouse cursor over an image so obviously this isn't going to work well on a phone</p>      
+                  
+
+                    <h6 style="color: black;"> How It Works</h6>
+                    <h6 style="color: black; font-size: .65em;">The HTML</h6>
+
+                   <p> Click HOVER CODE button to your right and you’ll see that the HTML code to create this Hoover Grid is a simple list of images within a div container</p>
+
+                    <h6 style="color: black; font-size: .65em;">The CSS</h6>
+
+                    <div style="display: grid; place-items: center;">
+                   <img src="hoovercss.png" style="height: 18em; width: 18em;">
+                 </div>
+
+<p>In the CSS portion of the Hover Grid we first define some variables <br>
+
+<span>--s: 150px;</span> controls the size of the images <br>
+  <span>--g: 10px;</span>  controls the gaps between those images <br>
+  <span>--f: 1.5;</span>   controls the scale factor or how large the zoom effect will be</p>
+
+
+                  
+                </article>
+
+                <article>
+                  <header>
+                    <h3>CSS Grid <br />
+                    This is &lt;div class=&quot;hover&quot;&gt;</h3>
+                  </header>
+                    <div class="hover" style="height: 18em; width: 18em;">
+                    <img alt="" src="Chaucer.png" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="NaughtyPutti.png" />
+                    <img alt="" src="Chaucer.png" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="NaughtyPutti.png" />
+                    <img alt="" src="Chaucer.png" />
+                    <img alt="" src="Chaucer.png" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="NaughtyPutti.png" />
+                    <img alt="" src="Chaucer.png" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="map.JPG" />
+                    <img alt="" src="NaughtyPutti.png" />
+                    <img alt="" src="Chaucer.png" />
+                </div>
+                    
+                              
+
+                    <h6>Hover with 18 Image Files</h6>
+
+                    <h6 style="color: black;"> How It Works (continued)</h6>
+
+ <p>And then we add the all-important CSS declaration <span>display: grid</span> to define the HTML element as a grid container, enabling it to become a two-dimensional layout system arranged into both rows and columns</p>                   
+
+<p>To create that grid we ask the browser for three columns like this: <span>grid-template-columns: repeat(3, auto);</span>
+And CSS Grid will automatically add as many rows as needed to use all the images we specify in the HTML file<br>
+
+In the CSS code we have two variables that we have already defined, one that controls the size of the images and one that sets the size of the gap between images:
+<span>width: calc(3*var(--s) + 2*var(--g));</span> meaning 3 times the size plus 2 times the gap 
+</p>                    
+                      
+                               
+<p style="font-size: .75em;">In the Hover Section of the CSS code we tell the browser that both the height and width are to be set to zero but yet we want both to be 100% of the size that we have already defined in the Grid defining section of the code when we wrote <span>--s: 150px;</span><br>
+
+  Now we need to increase the scale of the images when they are hovered on so to do that we adjust an image’s width and height in the Hover section of the CSS code<br>
+
+  <span>.hover img:hover{<br>
+  filter: grayscale(0);<br>
+  width:  calc(var(--s)*var(--f));<br>
+  height: calc(var(--s)*var(--f));</span><br>
+
+  And both use -- s which we have already defined as 150px<br></p>
+
+  <p>There's nothing magical about --s being 150px in fact this Hover Grid is highly tweakable and in the panels below we'll investigate how as wizards and dancing animals we can change the looks of things
+</p>
+                  <ul class="actions special">
+                    <li><a href="http://www.scoroncocolo.com/hoovercode.html" class="button">View the Hover HTML and CSS</a></li>
+                  </ul>
+                </article>
+
+                <article>
+
+                  <h6 style="color: black;">Altering the CSS</h6>
+
+     <p>The first image on the right is the result of using the CSS code below when you apply it to a group of image files enclosed in div tags<br>
+
+   Go <a href="http://www.scoroncocolo.com/hoovercode.html">HERE </a> to see the <strong>Hover</strong> CSS and HTML code on one page</p>              
+                  
+          <img src="hover.png" style="height: 18em; width: 18em;">
+          <h6> Change the CSS code</h6>
+
+   <p style="font-size: .75em;">The image below it is almost the same CSS except we've changed the aspect-ratio<br>
+
+    Writing <span>aspect-ratio: 1;</span> is the shortcut for <span style=" color:blue;">aspect-ratio: 1/1;</span> and it means that width and height are equal proportion<br>
+
+    Writing <span>aspect-ratio: 1/2;</span> means height is twice the width<br>
+
+   Here's the <a href="http://www.scoroncocolo.com/hoovercode.html">hover </a>HTML and CSS code on one page</p>
+
+          <img src="hovertwo.jpg" style="height: 18em; width: 18em;">
+
+                </article>
+
+                <article>
+                  
+                                    
+                  <div class="hover" style="height: 18em; width: 18em;">
+                                    <img src="Alice.png" alt="">
+                                    <img src="fable.png" alt="" title="">
+                                    <img src="lilboyblue.jpg" alt="" title="Lil' Boy Blue">
+                                    <img src="JackBean.png" alt="" title="">
+                                    <img src="BoPeep.png" alt="" title="Joan o Arc">
+                                    <img src="boyblue.jpg" alt="" title="Joan o Arc"> 
+                                    <img src="Alice.png" alt="" >
+                                    <img src="fable.png" alt="" title="">
+                                    <img src="lilboyblue.jpg" alt="" title="">
+                                    <img src="JackBean.png" alt="" title="">
+                                    <img src="boyblue.jpg" alt="" title="Joan o Arc">
+                                    <img src="BoPeep.png" alt="" title="Joan o Arc"> 
+                                    
+                                </div>
+
+                                <header>
+        
+                    <h6>hover</h6>
+                  </header>
+                  
+                                    
+                  <div class="hovertwo" style="height: 18em; width: 18em;  margin-top:10em">
+                                    <img src="Alice.png" alt="">
+                                    <img src="fable.png" alt="" title="">
+                                    <img src="lilboyblue.jpg" alt="" title="Lil' Boy Blue">
+                                    <img src="JackBean.png" alt="" title="">
+                                    <img src="BoPeep.png" alt="" title="Joan o Arc">
+                                    <img src="boyblue.jpg" alt="" title="Joan o Arc"> 
+                                    <img src="Alice.png" alt="" >
+                                    <img src="fable.png" alt="" title="">
+                                    <img src="lilboyblue.jpg" alt="" title="">
+                                    <img src="JackBean.png" alt="" title="">
+                                    <img src="boyblue.jpg" alt="" title="Joan o Arc">
+                                    <img src="BoPeep.png" alt="" title="Joan o Arc"> 
+                                    
+                                </div>
+
+                                <header>
+        
+                    <h6>hovertwo</h6>
+                  </header>
+                    
+
+                </article>
+
+                 <article>
+
+     <p>What other changes can we make<br>
+
+      If we change the scale factor f from 1.5 to 3 here's what happens<br>
+
+      The pop on mouse-over is twice as large
+
+      </p>              
+                  
+          <img src="hoverfour.jpg" style="height: 18em; width: 18em;">
+          <h6> Change the CSS code</h6>
+
+   <p style="font-size: .75em;">The image below it is almost the same CSS except we've changed the aspect-ratio<br>
+
+    Writing <span style=" color:blue;">aspect-ratio: 1;</span> is the shortcut for <span style=" color:blue;">aspect-ratio: 1/1;</span> and it means that width and height are equal proportion<br>
+
+    Writing <span style=" color:blue;">aspect-ratio: 1/2;</span> means height is twice the width<br>
+
+   Here's the <a href="http://www.scoroncocolo.com/hoovercode.html">hover </a>CSS and HTML code on one page</p>
+
+          <img src="hovertwo.jpg" style="height: 18em; width: 18em;">
+          
+          <br><br>
+          <p>So as you can see the code is amenable to adjustment</p>
+          <p>You can play around with changing the s (size),g (gap) and f (bounce) variables </p>
+          <p>You can change the grayscale that will give you more of less color</p>
+          <p>Practically everything in the CSS <strong>AND</strong> the HTML can be adjusted or altered</p>
+          <p>Always remember that "we're here on Earth to fart around with stuff"</p>
+
+                </article>
+
+             <article>
+                  <header>
+                    
+                    <h3>Here's some M. C. Escher images </h3>
+                    <h6> Scale Factor changed from 1.5 to 3</h6>
+                  </header>
+                      
+                                <div class="hoverfour" style="height: 18em; width: 18em;">
+                                    <img src="escher4.jpg" alt="">
+                                    <img src="newminor1.jpg" alt="" title="">
+                                    <img src="minor2.jpg" alt="" title="Lil' Boy Blue">
+                                    <img src="bigswans.jpg" alt="" title="">
+                                    <img src="bel.jpg" alt="" title="Joan o Arc">
+                                    <img src="newskynwater.jpg" alt="" title="Joan o Arc"> 
+                                    <img src="escher4.jpg" alt="" >
+                                    <img src="newminor1.jpg" alt="" title="">
+                                    <img src="minor2.jpg" alt="" title="">
+                                    <img src="bigswans.jpg" alt="" title="">
+                                    <img src="bel.jpg" alt="" title="Joan o Arc">
+                                    <img src="newskynwater.jpg" alt="" title="Joan o Arc"> 
+                                    
+                                </div>
+
+                                 <header>
+        
+                    <h6>hovertwo</h6>
+                  </header>
+
+                    <div class="hover" style="height: 18em; width: 18em; margin-top: 10em;">
+                                    <img src="escher4.jpg" alt="">
+                                    <img src="newminor1.jpg" alt="" title="">
+                                    <img src="minor2.jpg" alt="" title="Lil' Boy Blue">
+                                    <img src="bigswans.jpg" alt="" title="">
+                                    <img src="bel.jpg" alt="" title="Joan o Arc">
+                                    <img src="newskynwater.jpg" alt="" title="Joan o Arc"> 
+                                    <img src="escher4.jpg" alt="" >
+                                    <img src="newminor1.jpg" alt="" title="">
+                                    <img src="minor2.jpg" alt="" title="">
+                                    <img src="bigswans.jpg" alt="" title="">
+                                    <img src="bel.jpg" alt="" title="Joan o Arc">
+                                    <img src="newskynwater.jpg" alt="" title="Joan o Arc"> 
+                                    
+                                </div>
+                                
+
+                  <p style="font-size: .75em;"></p>
+                  
+                </article>
+
+                
+                <article>
+                  <header>
+                    
+                    <h2>CSS Grid</h2>
+                </header>
+  <img src="Skippy.png" alt="" / style="height: 18em; width: 18em;">
+     
+                  <p>This is a picture of a CSS Grid image collage with an interesting border effect that we'll talk about eventually in another post</p>
+                  
+                </article>
+                                   <article>
+                  <header>
+                    
+                    <h2>CSS Grid</h2>
+                  </header>
+                   <img src="scoronshot.jpg" alt="" / style="height: 18em; width: 18em;">
+                  <h2>CSS Grid</h2>
+              <p>This is another picture of a css image grid I want to write about in another post</p>
+
+                
+                </article>
+
+
+
+                <article>
+                  <header>
+                    
+                    <h3>CSS Grid <br />
+                    This is &lt;div class=&quot;FourCorners&quot;&gt;</h3>
+                  </header>
+                      
+                                <div class="fourcorner" style="height: 18em; width: 18em;">
+  <div class="split-image-fourcorner">
+    <div class="quadrant quadrant-1"></div>
+    <div class="quadrant quadrant-2"></div>
+    <div class="quadrant quadrant-3"></div>
+    <div class="quadrant quadrant-4"></div>
+ </div>
+ 
+</div>
+                  <p>This CSS Grid image is called Four Corners and I'm currently working on a post about this<br>
+                  Tap it or hover over it to make it split into four corners
+                  </p>
+                  <p>Here is a <a href="http://www.scoroncocolo.com/fourcorners.html">link</a> to the code</p>
+                </article>
+
+                <article>
+                  <header>
+                    
+                    <h3>CSS Grid <br />
+                    This is &lt;div class=&quot;hover&quot;&gt;</h3>
+                  </header>
+<div>
+      <div class="hover" style="height: 14em; width: 18em;">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="Scoroncocolo.jpg" alt="" title="The Wizard Scoroncocolo">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">
+                                    <img src="NaughtyPutti.png" alt="">  
+                                      
+                                </div> 
+</div>                    
+                   <br><br>                              
+                 <p>Thanks for the visit</p>
+                </article>
+                               
+
+               
+
+                                  
+
+              </section>
+
+                       
+
+            <!-- Footer 
+              <footer>
+                <div class="pagination">
+                  <<a href="#" class="previous">Prev</a>
+                  <a href="#" class="page active">1</a>
+                  <a href="#" class="page">2</a>
+                  <a href="#" class="page">3</a>
+                  <span class="extra">&hellip;</span>
+                  <a href="#" class="page">8</a>
+                  <a href="#" class="page">9</a>
+                  <a href="#" class="page">10</a>
+                  <a href="#" class="next">Next</a>
+                </div>
+              </footer>
+
+              -->
+
+          </div>
+
+
+
+          
+
+        
+
+        <!-- Copyright -->
+          <div id="copyright">
+            <ul>
+              <li>&copy; Scoroncocolo</li>
+              <li>Design: <a href="http://www.scoroncocolo.com/about.html">Scoroncocolo</a></li>
+            </ul>
+          </div>
+
+      </div>
+
+    <!-- Scripts -->
+      <script src="jquery.min.js"></script>
+      <script src="jquery.scrollex.min.js"></script>
+      <script src="jquery.scrolly.min.js"></script>
+      <script src="browser.min.js"></script>
+      <script src="breakpoints.min.js"></script>
+      <script src="util.js"></script>
+      <script src="main.js"></script>
+
+  </body>
+</html>
